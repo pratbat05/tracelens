@@ -1,4 +1,4 @@
-ervices:
+services:
   - type: web
     name: tracelens
     runtime: docker
