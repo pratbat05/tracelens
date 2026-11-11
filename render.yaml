@@ -1,23 +1,16 @@
-services:
+ervices:
   - type: web
     name: tracelens
     runtime: docker
-    plan: starter
+    plan: free
     dockerfilePath: ./Dockerfile
     dockerContext: .
     autoDeployTrigger: off
     healthCheckPath: /api/health
-    disk:
-      name: tracelens-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
-      - key: TRACELENS_DATA_DIR
-        value: /var/data
-      - key: TRACELENS_DB
-        value: /var/data/tracelens.sqlite3
       - key: OPENAI_BASE_URL
         value: https://api.openai.com/v1
       - key: OPENAI_MODEL
         value: gpt-4o-mini
+
 
